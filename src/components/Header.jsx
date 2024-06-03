@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <header className="header">
-      <div className="logo">
-        <img src="../../public/K.png" alt="KK Consulting Logo" />
-      </div>
+      <Link to="/home">
+        <div className="logo">
+          <img src="../../public/K.png" alt="KK Consulting Logo" />
+        </div>
+      </Link>
+
       <nav>
         <ul>
           <li>

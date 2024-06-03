@@ -56,18 +56,33 @@ nav ul li a:focus {
 @media (max-width: 768px) {
   .header {
     flex-direction: column;
+    align-items: center; /* Center everything in the header vertically */
+  }
+
+  nav {
+    width: 100%; /* Full width to maximize space for nav */
   }
 
   nav ul {
+    flex-direction: row; /* Keep items horizontal */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0;
     width: 100%;
-    justify-content: space-around;
+    display: flex; /* Ensure it's using flexbox */
+  }
+
+  nav ul li {
+    flex-grow: 1; /* Allows each li to grow and fill the space evenly */
+    text-align: center; /* Center text within each li */
   }
 
   nav ul li a {
-    width: 100%;
-    text-align: center;
+    display: block; /* Makes the link fill its container */
+    padding: 10px 0; /* Vertical padding for better tap targets */
   }
 }
+
 
 .hero {
   text-align: center;
@@ -210,6 +225,16 @@ form {
 @media (max-width: 768px) {
   form {
     padding: 10px; /* Reduce padding on smaller screens */
+  }
+}
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column; /* Stacks the elements vertically on mobile */
+  }
+
+  .header .logo {
+    order: 1; /* Ensures logo is at the top on mobile */
+    margin-bottom: 10px; /* Provides spacing from the next element */
   }
 }
 
